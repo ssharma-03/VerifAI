@@ -1,20 +1,30 @@
-# Factify: AI News Classifier with Deep Learning
-The proliferation of fake news presents significant challenges to information integrity. This system automatically classifies news articles as "real" or "fake" with 99% accuracy.
+Perfect 👍 I’ll clean up the README for you:
+
+* Change project name from **Factify** → **VerifAI**
+* Remove **all old author links/emails**
+* Add only **your GitHub link**
+* Keep everything else (features, stack, pipeline, etc.) intact
+
+Here’s your updated **README.md** 👇
+
+---
+
+```markdown
+# VerifAI: AI News Classifier with Deep Learning
+The proliferation of fake news presents significant challenges to information integrity. This system automatically classifies news articles as "real" or "fake" with 99% accuracy.  
 Modern social media platforms and online news outlets enable the rapid dissemination of information, but they also facilitate the widespread propagation of intentionally false or misleading content—commonly known as fake news. This phenomenon undermines public trust, distorts democratic processes, and can lead to tangible harms such as public health scares or financial market disruptions.
 
 The core problem of this project is to automatically distinguish between fake and real news articles based solely on their textual content.
 
-![Image](https://github.com/user-attachments/assets/dd36efc1-a097-4d90-a5bf-f0c3896bedfa)
-
 ---
 
 ### Key Features
-- **98.5% Accuracy** with LSTM-GRU architecture
-- **End-to-end CI/CD pipeline** with Docker containers
-- **Web interface** with HTML/CSS frontend
-- **Microservice architecture** for scalability
-- **multiple neural network** architectures
-- **Flask API** for integration
+- **98.5% Accuracy** with LSTM-GRU architecture  
+- **End-to-end CI/CD pipeline** with Docker containers  
+- **Web interface** with HTML/CSS frontend  
+- **Microservice architecture** for scalability  
+- **Multiple neural network** architectures  
+- **Flask API** for integration  
 
 ---
 
@@ -26,7 +36,6 @@ The core problem of this project is to automatically distinguish between fake an
 | Data Processing    | Pandas, NLTK, etc |
 | Visualization      | Matplotlib, Seaborn |
 | Container          | Docker |
-| Container          | Docker |
 | Github Action      | CI-CD |
 | UI                 | HTML, CSS |
 
@@ -35,7 +44,8 @@ The core problem of this project is to automatically distinguish between fake an
 ## Project Structure
 
 ```
-Factify/
+
+VerifAI/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
@@ -50,35 +60,35 @@ Factify/
 │   └── prediction.log        # Log file for model predictions and operations
 │
 ├── models/
-│   └── saved_models/         # Directory for saved trained models
+│   └── saved\_models/         # Directory for saved trained models
 │
 ├── notebooks/
-│   └── experiment.ipynb    # For exploratory analysis notebooks
+│   └── experiment.ipynb      # For exploratory analysis notebooks
 │
 ├── src/
-│   ├── __init__.py           # Make src a Python package
-│   ├── data_loader.py        # Data loading functions
+│   ├── **init**.py           # Make src a Python package
+│   ├── data\_loader.py        # Data loading functions
 │   ├── preprocessing.py      # Cleaning & tokenization
 │   ├── eda.py                # EDA and visualization
 │   ├── model.py              # Model building/training
 │   ├── evaluation.py         # Model evaluation
 │   ├── utils.py              # Utility functions
 │   └── logger.py             # Logging config
-|
-├── static/
-│   └── style.css   
 │
-├── templats/
+├── static/
+│   └── style.css
+│
+├── templates/
 │   └── index.html
-|
+│
 ├── test/
-│   └── test_app.py
+│   └── test\_app.py
 │
 ├── img/                      # Store image files for visualization
-├── setup.py 
-├── render.yaml 
+├── setup.py
+├── render.yaml
 ├── app.png
-├── .gitignore                     
+├── .gitignore
 ├── Dockerfile
 ├── requirements.txt
 ├── LICENSE
@@ -86,12 +96,13 @@ Factify/
 ├── main.py                   # Main script to run the pipeline
 ├── README.md                 # Project documentation
 └── requirements.txt          # Required Python packages
-```
+
+````
 
 ---
 
 ### **Model Architecture**
-**LSTM-GRU Hybrid (Best Performing Model)**
+**LSTM-GRU Hybrid (Best Performing Model)**  
 ```python
 Sequential([
     Embedding(10000, 100),
@@ -100,10 +111,12 @@ Sequential([
     Dropout(0.2),
     Dense(1, activation='sigmoid')
 ])
-```
+````
+
 ---
 
-## System Architecture <a name="system-architecture"></a>
+## System Architecture
+
 ```mermaid
 graph TD
     A[Input Data] --> B[Preprocessing]
@@ -115,61 +128,75 @@ graph TD
 ---
 
 ### Components
+
 1. **Data Ingestion Layer**
-   - CSV/JSON file support
-   - Database connectors
+
+   * CSV/JSON file support
+   * Database connectors
 
 2. **Processing Layer**
-   - Text normalization
-   - Tokenization
-   - Sequence padding
+
+   * Text normalization
+   * Tokenization
+   * Sequence padding
 
 3. **Model Layer**
-   - Ensemble of 7 LSTM variants
-   - Model versioning
+
+   * Ensemble of 7 LSTM variants
+   * Model versioning
 
 ---
 
-##  Data Pipeline <a name="data-pipeline"></a>
+## Data Pipeline
+
 ### Data Sources
-- Kaggle dataset (True/Fake News)
-- 42,000 labeled articles (balanced)
+
+* Kaggle dataset (True/Fake News)
+* 42,000 labeled articles (balanced)
 
 ### Preprocessing Steps
+
 1. **Cleaning**:
-   - URL removal
-   - HTML tag stripping
-   - Special character removal
+
+   * URL removal
+   * HTML tag stripping
+   * Special character removal
 
 2. **Normalization**:
-   - Case folding
-   - Stopword removal
-   - Stemming
+
+   * Case folding
+   * Stopword removal
+   * Stemming
 
 3. **Feature Engineering**:
-   - Word counts
-   - Sentence counts
-   - Character counts
+
+   * Word counts
+   * Sentence counts
+   * Character counts
 
 ### Schema
-| Column        | Type    | Description               |
-|--------------|---------|---------------------------|
-| clean_text   | String  | Processed article content |
-| target       | Integer | 0=Fake, 1=Real            |
+
+| Column      | Type    | Description               |
+| ----------- | ------- | ------------------------- |
+| clean\_text | String  | Processed article content |
+| target      | Integer | 0=Fake, 1=Real            |
 
 ---
 
-##  Model Specifications <a name="model-specifications"></a>
+## Model Specifications
+
 ### Model Comparison
-| Model Type               | Accuracy | Precision | Recall |
-|--------------------------|----------|-----------|--------|
-| LSTM with GRU            | 0.99     | 0.99      | 0.99   |
-| Bidirectional LSTM       | 0.99     | 0.99      | 0.99   |
-| CNN-LSTM Hybrid          | 0.99     | 0.99      | 0.99   |
+
+| Model Type         | Accuracy | Precision | Recall |
+| ------------------ | -------- | --------- | ------ |
+| LSTM with GRU      | 0.99     | 0.99      | 0.99   |
+| Bidirectional LSTM | 0.99     | 0.99      | 0.99   |
+| CNN-LSTM Hybrid    | 0.99     | 0.99      | 0.99   |
 
 ---
 
 ### Hyperparameters
+
 ```yaml
 vocab_size: 10000
 embedding_dim: 100
@@ -195,8 +222,10 @@ paths:
 
 ---
 
-## Performance Metrics <a name="performance-metrics"></a>
+## Performance Metrics
+
 ### Evaluation Results
+
 ```python
               precision    recall  f1-score   support
 
@@ -210,24 +239,24 @@ weighted avg       0.99      0.99      0.99      8976
 
 ---
 
-## Future Enhancements <a name="future-enhancements"></a>
+## Future Enhancements
+
 ### Roadmap
-- Q3 2023: Multilingual support
-- Q4 2023: Explainable AI features
-- Q1 2024: Real-time streaming
+
+* Multilingual support
+* Explainable AI features
+* Real-time streaming
 
 ### Research Directions
-- Transformer-based architectures
-- Few-shot learning
-- Adversarial robustness
+
+* Transformer-based architectures
+* Few-shot learning
+* Adversarial robustness
 
 ---
 
-📧 [iconicemon01@gmail.com](mailto:iconicemon01@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/md-emon-hasan-695483237/)
-🔗 [GitHub](https://github.com/Md-Emon-Hasan)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![TensorFlow 2.8](https://img.shields.io/badge/tensorflow-2.8-orange?logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+🔗 **GitHub:** [https://github.com/ssharma-03/VerifAI](https://github.com/ssharma-03/VerifAI)
 
----
+```
+
+
