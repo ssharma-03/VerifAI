@@ -1,15 +1,3 @@
-Perfect 👍 I’ll clean up the README for you:
-
-* Change project name from **Factify** → **VerifAI**
-* Remove **all old author links/emails**
-* Add only **your GitHub link**
-* Keep everything else (features, stack, pipeline, etc.) intact
-
-Here’s your updated **README.md** 👇
-
----
-
-```markdown
 # VerifAI: AI News Classifier with Deep Learning
 The proliferation of fake news presents significant challenges to information integrity. This system automatically classifies news articles as "real" or "fake" with 99% accuracy.  
 Modern social media platforms and online news outlets enable the rapid dissemination of information, but they also facilitate the widespread propagation of intentionally false or misleading content—commonly known as fake news. This phenomenon undermines public trust, distorts democratic processes, and can lead to tangible harms such as public health scares or financial market disruptions.
